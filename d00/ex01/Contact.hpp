@@ -20,6 +20,7 @@ class Contact
 		std::string phonenumber;
 		std::string darcksecret;
 	public:
+		int count;
 		~Contact();
 
 		void setContact();

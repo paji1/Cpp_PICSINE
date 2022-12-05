@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 11:40:49 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/12/05 11:44:15 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/12/05 12:23:26 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,12 @@ void  PhoneBook::start()
 	if (state > 0)
 	{
 		if (state == ADD)
+		{
 			phonebook[count % 8].setContact();
+			phonebook[count % 8].count = count % 8;
+		}
 		else if (state == SEARCH)
-			std::cout  << "search" << std::endl;
+			show();
 		if (state == EXIT)
 			return ;
 	}
@@ -56,7 +59,7 @@ int  PhoneBook::get_state()
 	}
 	if (buff == "ADD")
 		return ADD;
-	else if (buff == "SEARCH")
+	else if (buff == "ss")
 		return SEARCH;
 	else if (buff == "EXIT")
 		return EXIT;
@@ -66,6 +69,12 @@ int  PhoneBook::get_state()
 
 
 
+void PhoneBook::show()
+{
+	
+	phonebook[count].showContact();
+	
+}
 PhoneBook::~PhoneBook()
 {
 }

@@ -16,6 +16,7 @@ class PhoneBook
 		~PhoneBook();
 
 		void start();
+		void show();
 		int  get_state();
 };
 

@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 11:39:27 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/12/05 11:44:53 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/12/05 12:23:58 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,14 @@ void Contact::print_element(std::string str)
 
 void Contact::showContact()
 {
+	std::ostringstream nb;
+	std::cout << "|";
+	nb << count;
+	print_element(nb.str());
 	print_element(firstName);
 	print_element(lastName);
 	print_element(nickname);
+	std::cout << std::endl;
 }
 
 void Contact::setContact()
