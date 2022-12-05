@@ -1,6 +1,6 @@
 CC = c++ 
 CFLAG = -std=c++98  
-SRC = main.cpp
+SRC = main.cpp Phonebook.cpp Contact.cpp
 OBJ = $(addprefix obj/, $(SRC:.cpp=.o))
 
 OUT = Phonebook
