@@ -26,6 +26,7 @@ class Contact
 
 		void setContact();
 		void showContact();
+		void showContactall();
 		void print_info(std::string str);
 		std::string printmessageGet(const char *);
 		void print_element(std::string str);

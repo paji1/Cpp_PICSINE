@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 11:40:49 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/12/06 14:20:05 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/12/06 14:50:46 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void  PhoneBook::start()
 		}
 		else if (state == SEARCH)
 		{
-			show(), std::cout << Get_index() << std::endl;
+			show(), phonebook[Get_index()].showContactall();
 		}
 		if (state == EXIT)
 			return ;
@@ -48,7 +48,7 @@ void  PhoneBook::start()
 int  PhoneBook::get_state()
 {
 	std::string buff;
-	while (buff.empty() || buff.find_first_not_of (' ') == buff.npos)
+	while (buff.empty() || buff.find_first_not_of (" \t") == buff.npos)
 	{
 		std::cout << magenta << 
 		"Welcome to Phone book \n"<<
@@ -89,7 +89,7 @@ int PhoneBook::Get_index()
 
 	while (index < 0 || index >= 8)
 	{
-		std::cout << yellow << "Enter index of contact :" << nc <<std::endl;
+		std::cout << yellow << "Enter index of contact (between 0 and 7):" << nc <<std::endl;
 		getline(std::cin, buff);
 		std::stringstream geek(buff);
 		geek >> index;
@@ -98,6 +98,8 @@ int PhoneBook::Get_index()
 		std::cin.clear();
 		std::clearerr(stdin);
 	}
+	if (phonebook[index].id == -1)
+		std::cout << "NOT FOUND" << std::endl;
 	return index;
 }
 PhoneBook::~PhoneBook()

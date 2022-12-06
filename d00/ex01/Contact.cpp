@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 11:39:27 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/12/06 14:13:11 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/12/06 14:43:51 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,20 @@ void Contact::showContact()
 	print_element(nickname);
 	std::cout << std::endl;
 }
+void Contact::showContactall()
+{
+	if (id == -1)
+		return ;
+	std::ostringstream nb;
+	std::cout << "|";
+	nb << id;
+	print_element(firstName);
+	print_element(lastName);
+	print_element(nickname);
+	print_element(phonenumber);
+	print_element(darcksecret);
+	std::cout << std::endl;
+}
 
 void Contact::setContact()
 {
@@ -61,7 +75,7 @@ std::string Contact::printmessageGet(const char *str)
 {
 	std::string buff;
 
-	while (buff.empty() || buff.find_first_not_of (' ') == buff.npos)
+	while (buff.empty() || buff.find_first_not_of (" \t") == buff.npos)
 	{
 		std::cout << magenta << "Enter " << str << " :" << nc <<std::endl;
 		getline(std::cin, buff);
