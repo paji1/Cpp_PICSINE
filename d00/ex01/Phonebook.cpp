@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 11:40:49 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/12/06 14:50:46 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/12/06 20:29:22 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,10 @@ int  PhoneBook::get_state()
 void PhoneBook::show()
 {
 	
-	std::cout << "|";
+	std::cout
+	<< " -------------------------------------------"
+	<< std::endl
+	<< "|";
 	phonebook[count].print_element("index");
 	phonebook[count].print_element("first name");
 	phonebook[count].print_element("last name");
@@ -80,6 +83,9 @@ void PhoneBook::show()
 	std::cout << std::endl;
 	for (int i = 0; i < NTAB ; i++)
 		phonebook[i].showContact();	
+	std::cout
+	<< " -------------------------------------------"
+	<< std::endl;
 }
 
 int PhoneBook::Get_index()
