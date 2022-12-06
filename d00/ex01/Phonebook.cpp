@@ -6,11 +6,12 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 11:40:49 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/12/06 20:29:22 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/12/06 21:01:57 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <stdlib.h>
 
 PhoneBook::PhoneBook()
 {
@@ -93,10 +94,13 @@ int PhoneBook::Get_index()
 	std::string buff;
 	int index = -1;
 
+	if (count == 0)
+		return std::cout << "phoneBook is empty"<< std::endl, 0;
 	while (index < 0 || index >= 8)
 	{
 		std::cout << yellow << "Enter index of contact (between 0 and 7):" << nc <<std::endl;
-		getline(std::cin, buff);
+		if (!getline(std::cin, buff))
+			exit(1);
 		std::stringstream geek(buff);
 		geek >> index;
 		if (buff != "0" && !index)
