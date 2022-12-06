@@ -4,7 +4,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdio>
-
+#include <sstream>
 #define nc     "\033[0m"
 #define red     "\033[1;31m"
 #define cayan     "\033[1;36m"
@@ -20,11 +20,13 @@ class Contact
 		std::string phonenumber;
 		std::string darcksecret;
 	public:
-		int count;
+		int id;
+		Contact();
 		~Contact();
 
 		void setContact();
 		void showContact();
+		void print_info(std::string str);
 		std::string printmessageGet(const char *);
 		void print_element(std::string str);
 };

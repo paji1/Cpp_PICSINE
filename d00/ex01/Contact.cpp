@@ -6,13 +6,18 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 11:39:27 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/12/05 12:23:58 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/12/06 14:13:11 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-void print_info(std::string str)
+Contact::Contact()
+{
+	this->id =  -1;
+}
+
+void Contact::print_info(std::string str)
 {
 	
 	if (str.length() <= 10)
@@ -31,9 +36,11 @@ void Contact::print_element(std::string str)
 
 void Contact::showContact()
 {
+	if (id == -1)
+		return ;
 	std::ostringstream nb;
 	std::cout << "|";
-	nb << count;
+	nb << id;
 	print_element(nb.str());
 	print_element(firstName);
 	print_element(lastName);
@@ -54,7 +61,7 @@ std::string Contact::printmessageGet(const char *str)
 {
 	std::string buff;
 
-	while (buff.empty())
+	while (buff.empty() || buff.find_first_not_of (' ') == buff.npos)
 	{
 		std::cout << magenta << "Enter " << str << " :" << nc <<std::endl;
 		getline(std::cin, buff);
@@ -62,7 +69,6 @@ std::string Contact::printmessageGet(const char *str)
 		std::clearerr(stdin);
 	}
 	return buff;
-
 }
 
 Contact::~Contact()
