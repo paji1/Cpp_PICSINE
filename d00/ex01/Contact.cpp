@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 11:39:27 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/12/06 14:43:51 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/12/06 15:37:55 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,15 @@ void Contact::print_info(std::string str)
 	
 	if (str.length() <= 10)
 		return std::cout << str, void(0);
-	std::cout << str.substr(0 , 9) << ".";
+	std::cout << str.substr(0 , 9).append(".");
 }
 
 void Contact::print_element(std::string str)
 {
 	std::cout
         << std::right
-        << std::setw(10);
+        << std::setw(10)
+		<< std::setfill(' ');
         print_info(str);
 	std::cout << '|';
 }
@@ -51,15 +52,11 @@ void Contact::showContactall()
 {
 	if (id == -1)
 		return ;
-	std::ostringstream nb;
-	std::cout << "|";
-	nb << id;
-	print_element(firstName);
-	print_element(lastName);
-	print_element(nickname);
-	print_element(phonenumber);
-	print_element(darcksecret);
-	std::cout << std::endl;
+	std::cout<< "firstName :"<<firstName << std::endl;
+	std::cout<< "lastName :"<<lastName << std::endl;
+	std::cout<< "nickname :"<<nickname << std::endl;
+	std::cout<< "phonenumber :"<<phonenumber << std::endl;
+	std::cout<< "darcksecret :"<<darcksecret << std::endl;
 }
 
 void Contact::setContact()
