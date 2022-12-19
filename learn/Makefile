@@ -1,5 +1,5 @@
 CC = c++ 
-CFLAG = -std=c++98  -I include
+CFLAG =   -I include
 SRC = main.cpp
 OBJ = $(addprefix obj/, $(SRC:.cpp=.o))
 
