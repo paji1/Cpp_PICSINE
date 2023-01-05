@@ -16,7 +16,8 @@ void Zombie::announce(  void )
 {
 
 	std::cout 
-	<< (char)toupper(this->name[0]) <<&this->name[1]  
+	<< (char)toupper(this->name[0]) 
+	<< &this->name[1]  
 	<< ": BraiiiiiiinnnzzzZ..."  
 	<< std::endl;
 }
