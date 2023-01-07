@@ -1,6 +1,6 @@
 CC = c++ 
 CFLAG =  -std=c++98 -Wall -Wextra -Werror
-SRC = main.cpp sed_isbetter.cpp
+SRC = main.cpp Harl.cpp
 INC = Zombie.hpp
 OBJ = $(addprefix obj/, $(SRC:.cpp=.o))
 

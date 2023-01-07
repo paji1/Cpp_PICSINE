@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 11:40:49 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/12/06 21:01:57 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/12/07 16:04:29 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 PhoneBook::PhoneBook()
 {
+	std::cout << magenta << 
+		"Welcome to Phone book"<< std::endl;
 	this->count = 0;
 }
 
@@ -51,8 +53,7 @@ int  PhoneBook::get_state()
 	std::string buff;
 	while (buff.empty() || buff.find_first_not_of (" \t") == buff.npos)
 	{
-		std::cout << magenta << 
-		"Welcome to Phone book \n"<<
+		std::cout << 
 		cayan<<
 		"choose ADD or SEARCH or EXIT:" << 
 		nc <<
