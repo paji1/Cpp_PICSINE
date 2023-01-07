@@ -28,15 +28,15 @@ void Harl::error(void)
 		<< std::endl;
 }
 
+
 void Harl::complain(std::string level)
 {
+	size_t pos = level.npos;
 	typedef void (Harl::*Harlptr[4])(void);
 	Harlptr ftap = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-
-	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	for (int i = 0; i < 4; i++)
-		if (levels[i].find(level) != levels->npos)
-			(this->*(ftap[i]))();
+	std::string levels = "DEBUG   INFO    WARNING ERROR";
+	if ((pos  = levels.find(level)) != levels.npos)
+		(this->*(ftap[pos/ 8]))();
 }
 
 Harl::Harl(/* args */)
