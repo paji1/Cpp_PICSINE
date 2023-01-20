@@ -23,6 +23,8 @@ public:
 	Fixed operator+(const Fixed &);
 	Fixed operator++();
 	Fixed operator++(int);
+	Fixed operator--();
+	Fixed operator--(int);
 	Fixed operator*(const Fixed &);
 	Fixed operator-(const Fixed &);
 	static Fixed& min(Fixed &, Fixed&);

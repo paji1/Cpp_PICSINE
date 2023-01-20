@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:32:42 by tel-mouh          #+#    #+#             */
-/*   Updated: 2023/01/19 06:06:05 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2023/01/20 11:00:59 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,14 @@ Fixed Fixed::operator++(int)
 	Fixed t;
 	t.num = num;
 	num++;
+	return t;
+}
+Fixed Fixed::operator--() { return --num, *this; }
+Fixed Fixed::operator--(int)
+{
+	Fixed t;
+	t.num = num;
+	num--;
 	return t;
 }
 
