@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:32:42 by tel-mouh          #+#    #+#             */
-/*   Updated: 2023/01/19 06:05:28 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2023/01/20 06:54:32 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,14 @@ Fixed Fixed::operator+(const Fixed &other)
 	a.num = num + other.num;
 	return a;
 }
+
 Fixed Fixed::operator-(const Fixed &other)
 {
 	Fixed a;
 	a.num = num - other.num;
 	return a;
 }
+
 Fixed Fixed::operator++() { return ++num, *this; }
 Fixed Fixed::operator++(int)
 {
