@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 13:02:09 by tel-mouh          #+#    #+#             */
-/*   Updated: 2023/01/21 05:56:37 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2023/01/21 05:48:31 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 	this->damage = other.damage;
 	this->hit = other.hit;
 	this->energy = other.energy;
-	this->name = this->name;
-	return *this;	
+	this->name = other.name;
+	return *this;
 }
 
 ClapTrap::ClapTrap(/* args */) : hit(10),

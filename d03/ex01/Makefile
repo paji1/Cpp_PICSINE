@@ -1,5 +1,5 @@
 CC = c++ 
-CFLAG =  -std=c++98 -Wall -Wextra -Werror
+CFLAG =  -std=c++98 -Wall -Wextra -Werror -g
 SRC = main.cpp ClapTrap.cpp
 INC = Zombie.hpp
 OBJ = $(addprefix obj/, $(SRC:.cpp=.o))
