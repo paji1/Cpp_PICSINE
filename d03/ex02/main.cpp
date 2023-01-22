@@ -1,9 +1,10 @@
 
-#include "ScavTrap.hpp"
+
+#include "FragTrap.hpp"
 // #include "ClapTrap.hpp"
 int main(void)
 {
-	ScavTrap robot = ScavTrap("taha");
+	FragTrap robot = FragTrap("taha");
 	robot.attack("TAHA");
 	robot.takeDamage(10);
 	robot.beRepaired(122);

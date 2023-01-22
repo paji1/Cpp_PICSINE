@@ -1,9 +1,12 @@
 
-#include "ScavTrap.hpp"
+
+#include "DiamondTrap.hpp"
 // #include "ClapTrap.hpp"
 int main(void)
 {
-	ScavTrap robot = ScavTrap("taha");
+	DiamondTrap robot = DiamondTrap("taha");
+
+	robot.whoAmI();
 	robot.attack("TAHA");
 	robot.takeDamage(10);
 	robot.beRepaired(122);

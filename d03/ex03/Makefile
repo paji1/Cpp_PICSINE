@@ -1,16 +1,16 @@
 CC = c++ 
-CFLAG =  -std=c++98 -Wall -Wextra -Werror -g
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+CFLAG =  -std=c++98 -Wall -Wextra -Werror -g -Wshadow  -Wno-shadow
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ = $(addprefix obj/, $(SRC:.cpp=.o))
 
 OUT = exec
 
 all : $(OUT)
 
-$(OUT) : $(OBJ) *.hpp
+$(OUT) : $(OBJ) 
 	$(CC) $(OBJ) -o $(OUT)
 
-obj/%.o : %.cpp 
+obj/%.o : %.cpp *.hpp
 	@mkdir -p obj
 	$(CC) $(CFLAG)  -c $< -o $@
 

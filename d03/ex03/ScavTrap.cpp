@@ -3,16 +3,12 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-	hit = 100;
 	energy = 50;
-	damage = 20;
 	std::cout << "constructor of ScavTrap call " << std::endl;
 }
 ScavTrap::ScavTrap(std::string _name) : ClapTrap(_name) 
 {
-	hit = 100;
 	energy = 50;
-	damage = 20;
 	std::cout << "constructors of ScavTrap "
 			  << _name
 			  << " call " << std::endl;
