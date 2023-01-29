@@ -1,32 +1,36 @@
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
-
 #include <iostream>
 #include <string>
+
+class Form;
+# include "Form.hpp"
 
 class Bureaucrat
 {
 private:
 	struct GradeTooHighException : public std::runtime_error
 	{
-			GradeTooHighException();
+		GradeTooHighException();
 	};
 	struct GradeTooLowException : public std::runtime_error
 	{
-			GradeTooLowException();
+		GradeTooLowException();
 	};
 	const std::string name;
-	int grade;	
+	int grade;
 
 public:
 	Bureaucrat();
-	Bureaucrat(std::string _name, int);
+	Bureaucrat(std::string _name, int _grade);
 	Bureaucrat(Bureaucrat const &);
 	~Bureaucrat();
-	const std::string& getName() const;
+	const std::string &getName() const;
 	int getGrade() const;
+	void setGrade(int);
 	void incrementGrade();
 	void decrementGrade();
+	void signForm(Form &);
 	Bureaucrat &operator=(Bureaucrat const &);
 	friend std::ostream &operator<<(std::ostream &, const Bureaucrat &);
 };
