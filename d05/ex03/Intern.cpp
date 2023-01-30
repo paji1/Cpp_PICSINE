@@ -3,7 +3,6 @@
 /*** ------------------------------- CONSTRUCTOR --------------------------------*/
 Intern::Intern()
 {
-	std::cout << "Intern Constructor called" << std::endl;
 }
 Intern::Intern(const Intern &other )
 {
@@ -13,7 +12,6 @@ Intern::Intern(const Intern &other )
 /*** -------------------------------- DESTRUCTOR --------------------------------*/
 Intern::~Intern()
 {
-	std::cout << "Intern Destructor called" << std::endl;
 }
 
 /*** --------------------------------- OVERLOAD ---------------------------------*/

@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 15:29:00 by tel-mouh          #+#    #+#             */
-/*   Updated: 2023/01/30 16:21:47 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2023/01/30 18:21:08 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ int main()
 	{
 		Intern someRandomIntern;
 		Form *rrf;
-		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+		Bureaucrat bure = Bureaucrat("taha", 1);
+		rrf->beSigned(bure);
+		bure.signForm(*rrf);
+		bure.executeForm(*rrf);
 		delete rrf;
 	}
 	catch (std::exception &e)

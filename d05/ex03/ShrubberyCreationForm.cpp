@@ -4,7 +4,7 @@
 ShrubberyCreationForm::ShrubberyCreationForm() : Form(145, 137, "shrubbery creation")
 {
 }
-ShrubberyCreationForm::ShrubberyCreationForm(std::string _target) : Form(145, 137, "Shrubbery Creation"),
+ShrubberyCreationForm::ShrubberyCreationForm(std::string _target) : Form(145, 137, "shrubbery creation"),
 																	target(_target)
 {
 }

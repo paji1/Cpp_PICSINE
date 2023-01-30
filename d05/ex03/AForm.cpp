@@ -9,7 +9,6 @@
 */
 Form::Form() : name("Form"), signe(false), grade(150), grade_exec(150)
 {
-	std::cout << "Form Constructor called" << std::endl;
 }
 
 Form::Form(int _grade, int _grade_exec, std::string _name) : name(_name),
@@ -21,7 +20,6 @@ Form::Form(int _grade, int _grade_exec, std::string _name) : name(_name),
 		throw GradeTooHighException();
 	if (_grade > 150 || _grade_exec > 150)
 		throw GradeTooLowException();
-	std::cout << "Form Constructor called" << std::endl;
 }
 
 Form::Form(Form const &other) : grade(other.grade)
@@ -33,7 +31,6 @@ Form::Form(Form const &other) : grade(other.grade)
 /*** -------------------------------- DESTRUCTOR --------------------------------*/
 Form::~Form()
 {
-	std::cout << "Form Destructor called" << std::endl;
 }
 
 /*** --------------------------------- OVERLOAD ---------------------------------*/
