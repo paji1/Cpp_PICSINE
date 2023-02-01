@@ -12,7 +12,6 @@ public:
 	Fixed(const Fixed &);
 	Fixed(const int);
 	Fixed(const float _fnum);
-	friend std::ostream &operator<<(std::ostream &os, const Fixed &other);
 	Fixed &operator=(const Fixed &);
 	bool operator<(const Fixed &);
 	bool operator>(const Fixed &);
@@ -36,4 +35,5 @@ public:
 	float toFloat(void) const;
 	int toInt(void) const;
 };
+std::ostream &operator<<(std::ostream &os, const Fixed &other);
 

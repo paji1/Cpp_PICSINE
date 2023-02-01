@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:32:42 by tel-mouh          #+#    #+#             */
-/*   Updated: 2023/01/20 11:00:59 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2023/02/01 21:38:46 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Fixed::Fixed(const float _fnum) { num = roundf(_fnum * 256); }
 Fixed::Fixed(const Fixed &other) { *this = other; }
 
 Fixed &Fixed::operator=(const Fixed &other) { return this->num = other.num, *this; }
-std::ostream &operator<<(std::ostream &os, const Fixed &other) { return ((char)other.num == 0) ? os << (other.toInt()) : os << other.toFloat(), os; }
+std::ostream &operator<<(std::ostream &os, const Fixed &other) { return os << other.toFloat(), os; }
 
 float Fixed::toFloat(void) const { return (float)num / 256; }
 
