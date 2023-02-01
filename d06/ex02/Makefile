@@ -1,6 +1,6 @@
 CC = c++ 
 CFLAG =  -std=c++98 -Wall -Wextra -Werror -g -Wshadow  -Wno-shadow 
-SRC = Data.cpp  Serializer.cpp  main.cpp
+SRC = Base.cpp   main.cpp
 OBJ = $(addprefix obj/, $(SRC:.cpp=.o))
 
 OUT = exec
