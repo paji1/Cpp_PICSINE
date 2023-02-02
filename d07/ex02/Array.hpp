@@ -14,19 +14,20 @@ private:
 
 	class Outofbund : public std::runtime_error
 	{
-		public:
+	public:
 		Outofbund() : std::runtime_error("OutOfbound")
 		{
 			;
 		}
 	};
-	
+
 public:
 	Array() : array(NULL), size_a(0)
 	{
 	}
 
-	Array(unsigned int n) try : size_a(n)
+	Array(unsigned int n)
+	try : size_a(n)
 	{
 		array = new T[n];
 		for (size_t i = 0; i < n * sizeof(T); i++)
@@ -37,7 +38,8 @@ public:
 		std::cout << e.what() << std::endl;
 	}
 
-	Array(Array const &other) try
+	Array(Array const &other)
+	try
 	{
 		*this = other;
 	}
@@ -66,15 +68,13 @@ public:
 		array = temp;
 		return *this;
 	}
-	T& operator[](unsigned int i)  
+	T &operator[](unsigned int i)
 	{
 
 		if (i >= size_a)
 			throw Outofbund();
-		return *(array + i); 
+		return *(array + i);
 	}
-	
-	
 };
 
 #endif /* * ARRAY_H */
