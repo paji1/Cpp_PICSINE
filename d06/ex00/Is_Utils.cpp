@@ -35,7 +35,7 @@ bool	Is_Utils::isprint(int c)
 
 bool Is_Utils::is_double(std::string num)
 {	
-	if (num == "nan")
+	if (num == "nan" || num == "+inf" || num == "inf" || num == "-inf")
 		return true;
 	size_t lenth = num.length();
 	if (!lenth)
@@ -57,7 +57,7 @@ bool Is_Utils::is_double(std::string num)
 bool Is_Utils::is_float(std::string num)
 {
 	size_t lenth = num.length();
-	if (num == "nanf")
+	if (num == "nanf" || num == "+inff" || num == "inff" || num == "-inff")
 		return true;
 	if (!lenth)
 		return false;
