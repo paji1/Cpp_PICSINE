@@ -33,7 +33,7 @@ public:
 	void signForm(Form &);
 	void executeForm(Form const & form);
 	Bureaucrat &operator=(Bureaucrat const &);
-	friend std::ostream &operator<<(std::ostream &, const Bureaucrat &);
 };
+std::ostream &operator<<(std::ostream &, const Bureaucrat &);
 
 #endif /* * BUREAUCRAT_H */

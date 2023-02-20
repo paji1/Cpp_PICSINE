@@ -2,16 +2,19 @@
 /*** ------------------------------- CONSTRUCTOR --------------------------------*/
 
 /**
- * @brief
- * @param grade
- * @param grade_exec
- * @param name
+ * @brief default constructur of Form
 */
 Form::Form() : name("Form"), signe(false), grade(150), grade_exec(150)
 {
 	std::cout << "Form Constructor called" << std::endl;
 }
 
+/**
+ * @brief  paramatrized constructur of Form
+ * @param grade
+ * @param grade_exec
+ * @param name
+*/
 Form::Form(int _grade, int _grade_exec, std::string _name) : name(_name),
 															 signe(false),
 															 grade(_grade),

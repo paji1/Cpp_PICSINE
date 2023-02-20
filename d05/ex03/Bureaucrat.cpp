@@ -36,7 +36,7 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &other)
 }
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &other)
 {
-	return os << other.name << ", bureaucrat grade " << other.grade << ".", os;
+	return os << other.getName() << ", bureaucrat grade " << other.getGrade() << ".", os;
 }
 
 /*** --------------------------------- METHODS ----------------------------------*/
