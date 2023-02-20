@@ -55,7 +55,6 @@ Form* 	Intern::makeForm(std::string name, std::string target)
 	{
 		if ((rform = (this->*(tab[i]))(target))->getName() == name) 
 			return std::cout << "Intern creates " << rform->getName() << std::endl, rform;
-		std::cout << rform->getName()<< std::endl;
 		delete rform;
 	}
 	throw form_not_exists();
