@@ -46,26 +46,21 @@ bool Form::operator==(Form &other)
 		return true;
 	return false;
 }
-bool operator==(std::string name, Form &other)
-{
-	if (other.name == name)
-		return true;
-	return false;
-}
+
 
 std::ostream &operator<<(std::ostream &os, const Form &other)
 {
 	os << "----------form-----------\n"
-		<< "name : "
-	   << other.name
+	   << "name : "
+	   << other.getName()
 	   << ", grade to sign : "
-	   << other.grade
+	   << other.getGrade()
 	   << ", grade to execute : "
-	   << other.grade_exec
+	   << other.getGrade_exec()
 	   << "\n"
 	   << "signed status : "
-	   << other.signe
-	   << "\n----------------------" ;
+	   << other.getSigne()
+	   << "\n----------------------";
 	return os;
 }
 /*** --------------------------------- METHODS ----------------------------------*/

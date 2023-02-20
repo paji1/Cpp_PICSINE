@@ -32,12 +32,12 @@ public:
 	
 
 	Form &operator=(Form const &);
-	friend std::ostream &operator<<(std::ostream &, const Form &);
 
 	bool getSigne() const;
 	int getGrade() const;
 	int getGrade_exec() const;
 	const std::string &getName() const;
 };
+std::ostream &operator<<(std::ostream &, const Form &);
 
 #endif /* * FORM_H */

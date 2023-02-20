@@ -6,7 +6,7 @@
  * @param grade
  * @param grade_exec
  * @param name
-*/
+ */
 Form::Form() : name("Form"), signe(false), grade(150), grade_exec(150)
 {
 	std::cout << "Form Constructor called" << std::endl;
@@ -46,16 +46,16 @@ Form &Form::operator=(Form const &other)
 std::ostream &operator<<(std::ostream &os, const Form &other)
 {
 	os << "----------form-----------\n"
-		<< "name : "
-	   << other.name
+	   << "name : "
+	   << other.getName()
 	   << ", grade to sign : "
-	   << other.grade
+	   << other.getGrade()
 	   << ", grade to execute : "
-	   << other.grade_exec
+	   << other.getGrade_exec()
 	   << "\n"
 	   << "signed status : "
-	   << other.signe
-	   << "\n----------------------" ;
+	   << other.getSigne()
+	   << "\n----------------------";
 	return os;
 }
 /*** --------------------------------- METHODS ----------------------------------*/

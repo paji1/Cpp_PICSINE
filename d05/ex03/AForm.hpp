@@ -36,9 +36,7 @@ public:
 	
 
 	Form &operator=(Form const &);
-	friend std::ostream &operator<<(std::ostream &, const Form &);
 	bool operator==(Form &);
-	friend bool operator==(std::string, Form &);
 	bool beExecute(Bureaucrat const &) const ;
 	bool getSigne() const;
 	int getGrade() const;
@@ -46,5 +44,6 @@ public:
 	const std::string &getName() const;
 	virtual void execute(Bureaucrat const & executor) const = 0;
 };
+std::ostream &operator<<(std::ostream &, const Form &);
 
 #endif /* * FORM_H */
