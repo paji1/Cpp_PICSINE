@@ -41,7 +41,11 @@ public:
 	Array(Array const &other)
 	try
 	{
-		*this = other;
+		size_a = other.size_a;
+		T *temp = new T[size_a];
+		for (size_t i = 0; i < size_a * sizeof(T); i++)
+			reinterpret_cast<char *>(temp)[i] = reinterpret_cast<char *>(other.array)[i];
+		array = temp;
 	}
 	catch (std::bad_alloc &e)
 	{

@@ -1,5 +1,5 @@
 CC = c++ 
-CFLAG =  -std=c++98 -Wall -Wextra -Werror -g -Wshadow  -Wno-shadow 
+CFLAG =   -Wall -Wextra -Werror -g 
 SRC = main.cpp 
 OBJ = $(addprefix obj/, $(SRC:.cpp=.o))
 
